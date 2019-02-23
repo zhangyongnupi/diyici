@@ -1,0 +1,26 @@
+
+spring:
+  profiles:
+    active: prod
+ #数据库默认我这么配不要idea提示的
+  datasource:
+    url: jdbc:mysql://localhost:3306/dbgirl
+    driverClassName: com.mysql.jdbc.Driver
+    username: root
+    password: root
+
+ #配置datajpa
+  jpa:
+    hibernate:
+    #同时会创建数据库表
+      ddl-auto: update
+    show-sql: true
+    database: mysql
+
+#配置热部署
+sping:
+ devtools:
+    restart:
+      enabled: true
+
+
